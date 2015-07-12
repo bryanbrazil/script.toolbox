@@ -102,6 +102,12 @@ class Main:
                 image, imagecolor = Filter_Image(self.id, self.radius)
                 HOME.setProperty(self.prefix + 'ImageFilter', image)
                 HOME.setProperty(self.prefix + "ImageColor", imagecolor)
+            elif info == 'extrathumbmovie' :
+                AddArtToLibrary("extrathumb", "Movie", "extrathumbs", EXTRATHUMB_LIMIT)
+            elif info == 'extrafanartmovie' :
+                AddArtToLibrary("extrafanart", "Movie", "extrafanart", EXTRAFANART_LIMIT)
+            elif info == 'extrafanarttvshow' :
+                AddArtToLibrary("extrafanart", "TVShow", "extrafanart", EXTRAFANART_LIMIT)
 
     def _init_vars(self):
         self.window = xbmcgui.Window(10000)  # Home Window
